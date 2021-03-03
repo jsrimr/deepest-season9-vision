@@ -56,4 +56,6 @@ test with single best network
 ```    
 
 ## Results
+![results](results.png)
+
 https://ui.neptune.ai/jeffrey/deepest-season9/e/DEEP-47/charts
