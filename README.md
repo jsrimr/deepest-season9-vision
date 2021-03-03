@@ -39,7 +39,9 @@ then
 ```
 
 - To enjoy the trained net:
-First, untar the weight files
+
+First, download weight files from (https://drive.google.com/drive/folders/1doKc5lFN3--W3DEtCC0yyaCsgIfh5-07?usp=sharing) and
+untar the weight files
 ```shell script
     tar -xzf without_mixup
     #or
