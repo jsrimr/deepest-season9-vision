@@ -116,7 +116,7 @@ class MobileBottleneck(nn.Module):
 
 
 class MobileNetV3(nn.Module):
-    def __init__(self, n_class=1000, input_size=224, dropout=0.8, mode='small', width_mult=1.0):
+    def __init__(self, n_class=6, input_size=224, dropout=0.8, mode='small', width_mult=1.0):
         super(MobileNetV3, self).__init__()
         input_channel = 16
         last_channel = 1280
@@ -151,10 +151,10 @@ class MobileNetV3(nn.Module):
                 [5, 240, 40,  True,  'HS', 1],
                 [5, 240, 40,  True,  'HS', 1],
                 [5, 120, 48,  True,  'HS', 1],
-                [5, 144, 48,  True,  'HS', 1],
-                [5, 288, 96,  True,  'HS', 2],
-                [5, 576, 96,  True,  'HS', 1],
-                [5, 576, 96,  True,  'HS', 1],
+                # [5, 144, 48,  True,  'HS', 1],
+                # [5, 288, 96,  True,  'HS', 2],
+                # [5, 576, 96,  True,  'HS', 1],
+                # [5, 576, 96,  True,  'HS', 1],
             ]
         else:
             raise NotImplementedError
