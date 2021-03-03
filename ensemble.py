@@ -77,6 +77,7 @@ def train(train_loader, model, criterion, optimizer, scheduler, epoch):
             r = random.random()
         else:
             r = 1
+        # mixup and cutmix codes are from : https://www.kaggle.com/virajbagal/mixup-cutmix-fmix-visualisations?select=trainer.py
         if r <= 0.33:  # mixup
             indices = torch.randperm(inputs.size(0))
             shuffled_data = inputs[indices]
@@ -198,6 +199,8 @@ def main():
         # scheduler_warmup.load_state_dict(checkpoint['optimizer'])
 
     # Train and val
+    # referred snapshot learning code from : https://github.com/moskomule/pytorch.snapshot.ensembles/blob/master/se.py
+    # however, referred code didn't update the learning rate rather every epoch, not every step. So I modified it.
     snapshots = []
     for model_num in range(CYCLES):
         best_acc = 0
